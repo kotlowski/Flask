@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Tyler Kotlowski</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Master CSS -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
+    <!-- Icon Functionality -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-wrapper waves-effect waves-light">
+        <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">details</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/test">Project Updates</a></li>
+    </ul>
+    <!-- End Navbar -->
+
+    <main>
+
+      <h1>Contact Tyler</h1>
+
+      <div class="container">
+        <form class="messagetyler" action="#doNothing" method="post">
+          <input type="text" name="fname" placeholder="First">
+          <input type="text" name="lname" placeholder="Last">
+          <input type="text" name="email" placeholder="Email">
+          <input type="text" name="message" placeholder="A friendly inquiry here...">
+          <input type="submit" class="btn waves-effect waves-light">
+        </form>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div id="copyright" class="container">
+        Copyright Tyler Kotlowski
+      </div>
+      <div class="flask">
+        <small>Made with Flask</small>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- JS -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/mobile.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/date.js') }}"></script>
+  </body>
+</html>

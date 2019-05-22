@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Master CSS -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
+  <!-- Icon Functionality -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper waves-effect waves-light">
+      <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">details</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="#contact" onclick="scaleContactInfo()">Contact</a></li>
+        <li><a href="/test">Project Updates</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile">
+    <li><a href="">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="#contactinfo" onclick="scaleContactInfo()">Contact</a></li>
+    <li><a href="/test">Project Updates</a></li>
+  </ul>
+  <!-- End Navbar -->
+  <main>
+    <!-- Parallax Landing -->
+    <div class="parallax-container">
+      <div class="parallax"><img src='{{url_for('static', filename='images/alaskaMountains.jpg')}}'></div>
+    </div>
+    <!-- End Parallax -->
+    <h1>Tyler Kotlowski</h1>
+    <div class="JavaScript Fun container">
+      <p id='p'>Check this out!</p>
+      <button type='button' class="btn waves-effect waves-light btn-med" onmousedown='changeColor()' onmouseup="revert()">Click On Me!</button>
+    </div>
+
+    <!-- Contact Info-->
+    <div id="scale" name='contactinfo' class="container scale-transition scale-out">
+      <div class="row">
+        <div class="col s10 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src='{{url_for('static', filename='images/social-media.jpg')}}'>
+              <span class="card-title">LinkedIn</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">details</i></a>
+            </div>
+            <div class="card-content">
+              <p>This is where you can find professional information about me and companies that I have worked at.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s10 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src='{{url_for('static', filename='images/github-drive.jpg')}}'>
+              <span class="card-title">Github</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">details</i></a>
+            </div>
+            <div class="card-content">
+              <p>This is where you can find repositories of code I have built or helped with.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div id="copyright" class="container">
+      Copyright Tyler Kotlowski
+    </div>
+    <div class="flask">
+      <small>Made with Flask</small>
+    </div>
+  </footer>
+  <!-- End Footer -->
+  <!-- JS -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/homepage.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/mobile.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/date.js') }}"></script>
+</body>
+</html>
