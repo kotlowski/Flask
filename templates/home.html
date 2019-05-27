@@ -14,17 +14,19 @@
 </head>
 <body>
   <!-- Navbar -->
+  <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper waves-effect waves-light">
       <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">details</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="">Home</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="#contact" onclick="scaleContactInfo()">Contact</a></li>
+        <li><a href="#contactinfo" onclick="scaleContactInfo()">Contact</a></li>
         <li><a href="/test">Project Updates</a></li>
       </ul>
     </div>
   </nav>
+  </div>
 
   <ul class="sidenav" id="mobile">
     <li><a href="">Home</a></li>
@@ -36,11 +38,14 @@
   <main>
     <!-- Parallax Landing -->
     <div class="parallax-container">
-      <div class="parallax"><img src='{{url_for('static', filename='images/alaskaMountains.jpg')}}'></div>
+      <div class="parallax"><img src='{{url_for('static', filename='images/parallaxbackground.jpg')}}'></div>
+      <div class="parallax-title">
+        <h1>Tyler Kotlowski</h1>
+        <h3>Full Stack Developer</h3>
+      </div>
     </div>
     <!-- End Parallax -->
-    <h1>Tyler Kotlowski</h1>
-    <div class="JavaScript Fun container">
+    <div class="container">
       <p id='p'>Check this out!</p>
       <button type='button' class="btn waves-effect waves-light btn-med" onmousedown='changeColor()' onmouseup="revert()">Click On Me!</button>
     </div>
@@ -53,10 +58,10 @@
             <div class="card-image">
               <img src='{{url_for('static', filename='images/social-media.jpg')}}'>
               <span class="card-title">LinkedIn</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">details</i></a>
+              <a class="btn-floating halfway-fab waves-effect waves-light blue" href="https://www.linkedin.com/in/tylerkotlowski/"><i class="material-icons">details</i></a>
             </div>
             <div class="card-content">
-              <p>This is where you can find professional information about me and companies that I have worked at.</p>
+              <p>This is where you can find professional information about me.</p>
             </div>
           </div>
         </div>
@@ -65,10 +70,10 @@
             <div class="card-image">
               <img src='{{url_for('static', filename='images/github-drive.jpg')}}'>
               <span class="card-title">Github</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">details</i></a>
+              <a class="btn-floating halfway-fab waves-effect waves-light red" href="https://github.com/kotlowski"><i class="material-icons">details</i></a>
             </div>
             <div class="card-content">
-              <p>This is where you can find repositories of code I have built or helped with.</p>
+              <p>This is where you can find code I have built or helped create.</p>
             </div>
           </div>
         </div>
@@ -90,6 +95,6 @@
   <!-- JS -->
   <script type="text/javascript" src="{{ url_for('static', filename='js/homepage.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/mobile.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/date.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/copyright.js') }}"></script>
 </body>
 </html>

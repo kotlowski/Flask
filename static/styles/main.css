@@ -9,12 +9,22 @@ main {
   text-align: center;
 }
 
+
 .sidenav {
   background-color: black;
 }
 
 .sidenav li>a {
   color: white;
+}
+
+.parallax-container {
+  background-size: 25%;
+  height: 730px;
+}
+
+.parallax-title {
+  margin-top: 100px;
 }
 
 .page-footer {

@@ -14,8 +14,16 @@ function revert() {
   console.log('Revert Function Activated');
 }
 
+// Contact Info Scale Fucntionality
 function scaleContactInfo() {
   var scale = document.getElementById('scale');
   scale.classList.toggle('scale-in');
   console.log('Contact Info Scaled');
 }
+
+// Parallax Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.parallax');
+  var instances = M.Parallax.init(elems, {});
+  console.log('Parallax Initialized');
+});
